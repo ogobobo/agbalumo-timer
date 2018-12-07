@@ -13,7 +13,7 @@ An opinionated starter kit to create fast UI applications using ReactJS.
 
 The following library and tools selections where made to improve and standarize development.
 
-#### Usage
+### Usage
 
 `npm install`
 
@@ -21,7 +21,7 @@ The following library and tools selections where made to improve and standarize 
 
 `http://localhost:8080`
 
-#### Testing
+### Testing
 
 - [Mocha](https://mochajs.org/)
 - [Chai](https://www.chaijs.com/)
