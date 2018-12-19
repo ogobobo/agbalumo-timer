@@ -47,6 +47,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.5",
+    "@material-ui/core": "^3.7.0",
+    "@material-ui/icons": "^3.0.1",
     "pre-commit": "^1.2.2",
     "prop-types": "^15.6.2",
     "react": "16.7.0-alpha.2",
