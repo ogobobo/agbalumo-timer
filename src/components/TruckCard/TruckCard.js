@@ -42,13 +42,7 @@ const styles = {
 
 function TruckCard(props) {
   const { classes, truck, setFavorite } = props;
-  // const [favorite, setFavorite] = useState(truck.favorite);
   const [openSnack, setopenSnack] = useState(false);
-  // const handleFavorite = () => {
-  //   setFavorite(!favorite);
-  //   setopenSnack(true);
-  //   console.log(truck);
-  // };
   const handleCloseSnack = (event, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -86,9 +80,7 @@ function TruckCard(props) {
           onClick={() => {
             setFavorite(truck.id);
             setopenSnack(!openSnack);
-            console.log(truck);
-          }
-          }
+          }}
           disabled={truck.favorite}
           size="small"
           color="primary"
