@@ -54,7 +54,7 @@ function TruckCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={truck.image}
+          image={ truck.images ? truck.images.image_one : ''}
           title={`${truck.name} going for ${truck.price}`}
         />
         <CardContent>
