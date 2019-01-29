@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import { Carousel, BImg } from 'bootstrap-4-react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import queryString from 'query-string';
@@ -32,9 +33,8 @@ const styles = theme => ({
     marginTop: 90,
     marginLeft: 200,
   },
-  gridList: {
-    width: 800,
-    height: 350,
+  grid: {
+    // marginLeft: 300,
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
@@ -42,11 +42,17 @@ const styles = theme => ({
   awesome: {
     marginLeft: 15,
     marginRight: 10,
+    color: '#3f51b5',
+    boxShadow: '0px 5px 7px 5px rgba(0, 0, 255, 0.15)',
   },
   image: {
     width: 600,
     height: 400,
     borderRadius: 15,
+    boxShadow: '0px 5px 7px 5px rgba(0, 0, 255, 0.15)',
+  },
+  details: {
+    marginTop: 20,
   },
 });
 
@@ -64,8 +70,9 @@ function Details(props) {
   }, []);
   return (
     <div className={classes.root}>
-      <div>
-      <Carousel w="100" id="carouselExampleControls" data-interval="false">
+      <Grid container justify="center" alignItems="center" spacing={0}
+  direction="column" className={classes.grid}>
+      <Carousel w="10" id="carouselExampleControls" data-interval="false">
         <Carousel.Inner className={classes.image}>
         <Carousel.Indicators>
           <Carousel.Indicator target="#carouselExampleIndicators" to="0" active />
@@ -87,8 +94,8 @@ function Details(props) {
           <Carousel.Next.Icon />
         </Carousel.Next>
       </Carousel>
-      </div>
-      <div>
+      </Grid>
+      <div className={classes.details}>
       <p>
       <FontAwesomeIcon icon="id-badge" className={classes.awesome}/> { truck.name }
      </p>

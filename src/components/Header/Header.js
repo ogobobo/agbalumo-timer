@@ -7,7 +7,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -32,16 +31,19 @@ const styles = {
     marginRight: 20,
   },
   link: {
-    textDecoration: 'none',
     color: '#FFF',
+    '&:focus, &:hover, &:visited, &:link, &:active': {
+      textDecoration: 'none',
+    },
   },
 };
 
 function Header(props) {
   const { classes } = props;
+  if (window.location.pathname === '/') return null;
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" style={{ background: 'linear-gradient(to right, #1CB5E0, #3f51b5, #1CB5E0)' }}>
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
           <Link to="/" className={classes.link} >
