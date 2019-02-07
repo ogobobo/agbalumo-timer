@@ -34,7 +34,6 @@ const styles = theme => ({
     marginLeft: 200,
   },
   grid: {
-    // marginLeft: 300,
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
