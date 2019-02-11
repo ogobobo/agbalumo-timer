@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "Super Truck One",
+        "model": "Sport model",
+        "price": 5000,
+        "description": "a really nice truck",
+        "images": {
+            "image_one": "https://images.unsplash.com/photo-1512668023544-749964af467a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "image_two": "https://images.unsplash.com/photo-1540852360777-5f6fa7752aeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_three": "https://images.unsplash.com/photo-1495804308966-66b1283202af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_four": "https://images.unsplash.com/photo-1525036433170-0968d34e16e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60",
+            "image_five": "https://images.unsplash.com/photo-1543912912-31e8712f16ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+        },
+        "contact_info": {
+            "phone_number": 4169102047,
+            "email": "gonzalovazquez010@gmail.com"
+        },
+        "favorite": false,
+        "details": {
+            "colour": "black",
+            "mileage": 500,
+            "location": "Nigeria",
+            "long_description": "a really nice truck a really nice truck a really nice truck"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Super Truck Two",
+        "model": "Sport model",
+        "price": 500,
+        "description": "a really nice truck",
+        "images": {
+            "image_one": "https://images.unsplash.com/photo-1512668023544-749964af467a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "image_two": "https://images.unsplash.com/photo-1540852360777-5f6fa7752aeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_three": "https://images.unsplash.com/photo-1495804308966-66b1283202af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_four": "https://images.unsplash.com/photo-1525036433170-0968d34e16e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60",
+            "image_five": "https://images.unsplash.com/photo-1543912912-31e8712f16ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+        },
+        "contact_info": {
+            "phone_number": 4169102047,
+            "email": "gonzalovazquez010@gmail.com"
+        },
+        "favorite": false,
+        "details": {
+            "colour": "black",
+            "mileage": 5500,
+            "location": "Nigeria",
+            "long_description": "a really nice truck a really nice truck a really nice truck"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Super Truck Three",
+        "model": "Sport model",
+        "price": 5900,
+        "description": "a really nice truck",
+        "images": {
+            "image_one": "https://images.unsplash.com/photo-1512668023544-749964af467a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "image_two": "https://images.unsplash.com/photo-1540852360777-5f6fa7752aeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_three": "https://images.unsplash.com/photo-1495804308966-66b1283202af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_four": "https://images.unsplash.com/photo-1525036433170-0968d34e16e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60",
+            "image_five": "https://images.unsplash.com/photo-1543912912-31e8712f16ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+        },
+        "contact_info": {
+            "phone_number": 4169102047,
+            "email": "gonzalovazquez010@gmail.com"
+        },
+        "favorite": false,
+        "details": {
+            "colour": "black",
+            "mileage": 5000,
+            "location": "Nigeria",
+            "long_description": "a really nice truck a really nice truck"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Super Truck Four",
+        "model": "Sport model",
+        "price": 500,
+        "description": "a really nice truck",
+        "images": {
+            "image_one": "https://images.unsplash.com/photo-1512668023544-749964af467a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "image_two": "https://images.unsplash.com/photo-1540852360777-5f6fa7752aeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_three": "https://images.unsplash.com/photo-1495804308966-66b1283202af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_four": "https://images.unsplash.com/photo-1525036433170-0968d34e16e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60",
+            "image_five": "https://images.unsplash.com/photo-1543912912-31e8712f16ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+        },
+        "contact_info": {
+            "phone_number": 4169102047,
+            "email": "gonzalovazquez010@gmail.com"
+        },
+        "favorite": false,
+        "details": {
+            "colour": "black",
+            "mileage": 5000,
+            "location": "Nigeria",
+            "long_description": "a really nice truck a really nice truck a really nice truck"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Super Truck Five",
+        "model": "Sport model",
+        "price": 500,
+        "description": "a really nice truck",
+        "images": {
+            "image_one": "https://images.unsplash.com/photo-1512668023544-749964af467a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "image_two": "https://images.unsplash.com/photo-1540852360777-5f6fa7752aeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_three": "https://images.unsplash.com/photo-1495804308966-66b1283202af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_four": "https://images.unsplash.com/photo-1525036433170-0968d34e16e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60",
+            "image_five": "https://images.unsplash.com/photo-1543912912-31e8712f16ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+        },
+        "contact_info": {
+            "phone_number": 4169102047,
+            "email": "gonzalovazquez010@gmail.com"
+        },
+        "favorite": false,
+        "details": {
+            "colour": "black",
+            "mileage": 5000,
+            "location": "Nigeria",
+            "long_description": "a really nice truck a really nice truck a really nice truck"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Super Truck Six",
+        "model": "Sport model",
+        "price": 500,
+        "description": "a really nice truck",
+        "images": {
+            "image_one": "https://images.unsplash.com/photo-1512668023544-749964af467a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "image_two": "https://images.unsplash.com/photo-1540852360777-5f6fa7752aeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_three": "https://images.unsplash.com/photo-1495804308966-66b1283202af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+            "image_four": "https://images.unsplash.com/photo-1525036433170-0968d34e16e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60",
+            "image_five": "https://images.unsplash.com/photo-1543912912-31e8712f16ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+        },
+        "contact_info": {
+            "phone_number": 4169102047,
+            "email": "gonzalovazquez010@gmail.com"
+        },
+        "favorite": false,
+        "details": {
+            "colour": "black",
+            "mileage": 5000,
+            "location": "Nigeria",
+            "long_description": "a really nice truck a really nice truck a really nice truck"
+        }
+    }
+]

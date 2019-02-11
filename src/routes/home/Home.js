@@ -1,58 +1,73 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import todoAPI from '../../api/todo';
-import Todo from '../../components/Todo/Todo';
-import { saveState, loadState } from '../../tools/localStorage';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
+import ImageSearch from '@material-ui/icons/ImageSearch';
 
+
+const styles = {
+  root: {
+    // fontSize: '1.3rem',
+    backgroundImage: 'url("https://images.unsplash.com/reserve/9JMZhTL8T7ulzIoD2E78_2010_02280041.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")',
+    backgroundSize: 'cover',
+    overflow: 'hidden',
+    width: '100%',
+    maxHeight: '100vh',
+    backgroundRepeat: 'no-repeat',
+  },
+  awesome: {
+    marginLeft: 13,
+    fontSize: '2rem',
+  },
+  grid: {
+    minHeight: '100vh',
+    textDecoration: 'none',
+  },
+  link: {
+    '&:focus, &:hover, &:visited, &:link, &:active': {
+      textDecoration: 'none',
+    },
+  },
+  button: {
+    textDecoration: 'none',
+    borderRadius: 15,
+    // color: '#FFF',
+    // borderColor: '#FFF',
+  },
+};
 /**
  * Home
- * Fetches todos and renders component
+ * Fetches trucks and renders component
  */
-function Home() {
-  const [todos, setTodos] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  // Fetch todos from API
-  const fetchData = async () => {
-    setIsLoading(true);
-    const result = await todoAPI();
-    setTodos(result);
-    setIsLoading(false);
-  };
-  // Call Todos on load
-  useEffect(() => {
-    const todosFromMemory = loadState();
-    // Load todos from Session Storage if available
-    if (todosFromMemory) {
-      setTodos(todosFromMemory);
-    } else {
-      fetchData();
-    }
-  }, []);
-  // Save data to Session Storage
-  useEffect(() => {
-    if (todos.length > 1) {
-      saveState(todos);
-    }
-  }, [todos]);
+
+function Home(props) {
+  const { classes } = props;
+  // useEffect(() => {
+  //   document.body.style.background = 'linear-gradient(to right, #e0eafc, #cfdef3)';
+  // });
   return (
-    <div>
-      {isLoading ? <p>Loading...</p>
-        : <Todo
-          todos={todos}
-          isLoading={isLoading}
-          deleteTodo={id => setTodos(todos.filter(itm => itm.id !== id))}
-          />
-      }
-    </div>
+    <div className={classes.root}>
+    <Grid container justify="center" spacing={0}
+  direction="column"
+  alignItems="center"
+  className={classes.grid}><Link to="/trucks" className={classes.link} >
+      <Button color="primary" className={classes.button} variant="outlined">Browse Trucks <ImageSearch className={classes.awesome}/></Button></Link>
+      </Grid>
+      </div>
   );
 }
 
-/**
- * propTypes
- * @property {function} todoAPI - API to retrieve Todos.
- */
 Home.propTypes = {
-  todoAPI: PropTypes.func,
+  classes: PropTypes.object.isRequired,
 };
 
-export default Home;
+export default withStyles(styles)(Home);
+/**
+ * propTypes
+ * @property {function} truckAPI - API to retrieve Trucks.
+ */
+// Home.propTypes = {
+//   truckAPI: PropTypes.func,
+// };
