@@ -1,4 +1,4 @@
-# TruckApp
+# Agbalumo Timer
 
 [![CircleCI](https://circleci.com/gh/https://github.com/ogobobo/Truck-App.svg?style=svg)](https://circleci.com/gh/https://github.com/ogobobo/Truck-App)
 
