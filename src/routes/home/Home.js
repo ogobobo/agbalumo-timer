@@ -53,7 +53,7 @@ function Home(props) {
   direction="column"
   alignItems="center"
   className={classes.grid}><Link to="/trucks" className={classes.link} >
-      <Button color="primary" className={classes.button} variant="outlined">Browse Trucks <ImageSearch className={classes.awesome}/></Button></Link>
+      <Button color="primary" className={classes.button} variant="outlined">Browsing Trucks <ImageSearch className={classes.awesome}/></Button></Link>
       </Grid>
       </div>
   );

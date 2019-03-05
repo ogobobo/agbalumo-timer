@@ -4,7 +4,7 @@
  */
 export const loadState = () => {
   try {
-    const serializedState = localStorage.getItem('truck-app');
+    const serializedState = localStorage.getItem('username');
     if (serializedState === null || serializedState === 'undefined') {
       return undefined;
     }
@@ -21,7 +21,7 @@ export const loadState = () => {
 export const saveState = (state) => {
   try {
     const serializedState = JSON.stringify(state);
-    localStorage.setItem('truck-app', serializedState);
+    localStorage.setItem('username', serializedState);
     return true;
   } catch (err) {
     throw err;
@@ -33,5 +33,5 @@ export const saveState = (state) => {
  * Delete state and set to undefined
  */
 export const deleteState = () => {
-  localStorage.setItem('truck-app', undefined);
+  localStorage.setItem('username', undefined);
 };
