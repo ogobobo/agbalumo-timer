@@ -33,7 +33,18 @@ const styles = {
     marginLeft: 15,
   },
   timeFont: {
-    fontSize: '5rem',
+    fontSize: '10rem',
+    marginLeft: 10,
+  },
+  paragraph: {
+    fontSize: '0.9rem',
+  },
+  seconds: {
+    marginLeft: 160,
+    color: 'grey',
+  },
+  minutes: {
+    color: 'grey',
   },
 };
 
@@ -45,6 +56,14 @@ function TimerCard(props) {
   const [greeting, setGreeting] = useState('');
   const [username, setUsername] = useState('');
   const [usernameChange, setUsernameChange] = useState(false);
+  const [chill, setChill] = useState(false);
+  const [grind, setGrind] = useState(false);
+  // secondText to make the second text dynamic.
+  // So if timer is less than 2 seconds, it reads as second
+  // And if greater than 2 seconds, it reads as seconds
+  // Similar logic for minuteText
+  const [secondText, setSecondText] = useState('SECOND');
+  const [minuteText, setMinuteText] = useState('MINUTE');
 
   const fetchData = () => {
     setUsername('');
@@ -67,19 +86,13 @@ function TimerCard(props) {
   }, [username]);
 
   useEffect(() => {
-    if (username.length > 1) {
-      saveState(username);
-    }
-  }, [username]);
-
-  useEffect(() => {
     const date = new Date();
     if (date.getHours() > 0 && date.getHours() < 12) {
-      setGreeting('Good Morning');
+      setGreeting('Good Morning,');
     } else if (date.getHours() > 12 && date.getHours() < 16) {
-      setGreeting('Good Afternoon');
+      setGreeting('Good Afternoon,');
     } else {
-      setGreeting('Good Evening');
+      setGreeting('Good Evening,');
     }
   });
 
@@ -87,34 +100,117 @@ function TimerCard(props) {
     const counter = setTimeout(() => {
       if (time === 30 || time === 5) {
         // reset seconds to zero and increment minutes by 1 when seconds get to the minute mark
-        if (seconds === 1000) {
+        if (seconds === 59) {
           // there are 60000 ms in 1 second. so update the seconds above to that
           setSeconds(0);
+          setSecondText('SECOND');
           setMinutes(minutes + 1);
         } else {
           // keep incrementing seconds if it's not up to a minute yet
           setSeconds(seconds + 1);
         }
       }
-    }, 1);
+    }, 1000);
     return () => {
       clearInterval(counter);
     };
   }, [seconds]);
 
-  const handleTimerRefresh = () => {
-    setSeconds(0);
-    setMinutes(0);
-  };
+  useEffect(() => {
+    // makes counter stop when time is 5 minutes
+    // for when the user clicks on chill
+    if (minutes === 5 && chill === true) {
+      setTime(0);
+      setSeconds(0);
+      // setMinutes(0);
+    }
+  }, [seconds]);
+
+  useEffect(() => {
+    // makes counter stop when time is 30 minutes
+    // for when the user clicks on grind
+    if (minutes === 30 && grind === true) {
+      setTime(0);
+      setSeconds(0);
+      // setMinutes(0);
+    }
+  }, [seconds]);
+
+
+  useEffect(() => {
+    // makes counter stop when time is 30 minutes
+    // for when the user clicks on grind
+    if (time === 0 && minutes === 0 && seconds === 0 && chill === false && grind === false) {
+      setTime(0);
+      setSeconds(0);
+      // setMinutes(0);
+    }
+  }, [seconds]);
+
+  useEffect(() => {
+    // makes counter stop when time is 30 minutes
+    // for when the user clicks on grind
+    if (time === 0 && minutes === 0 && seconds === 0 && chill === false && grind === false) {
+      setTime(0);
+      setSeconds(0);
+      // setMinutes(0);
+    }
+  }, [minutes]);
+
+  useEffect(() => {
+    // makes counter stop when time is 30 minutes
+    // for when the user clicks on grind
+    if (time === 0 && minutes === 0 && seconds === 0 && chill === false && grind === false) {
+      setTime(0);
+      setSeconds(0);
+      // setMinutes(0);
+    }
+  }, [time]);
+
+  useEffect(() => {
+    // set second and minute text to singular or plural
+    if (minutes > 1) {
+      setMinuteText('MINUTES');
+    }
+  }, [minutes]);
+
+  useEffect(() => {
+    // set second and minute text to singular or plural
+    if (seconds > 1) {
+      setSecondText('SECONDS');
+    }
+  }, [seconds]);
 
   const handleGrindTime = () => {
-    setTime(30);
+    setTime(0);
+    setMinutes(0);
+    setSeconds(0);
+    setTime(30); // 30 minute work session
     setSeconds(1);
+    setGrind(true);
+    setChill(false);
   };
   const handleChillTime = () => {
-    setTime(5);
+    setTime(0);
+    setMinutes(0);
+    setSeconds(0);
+    setTime(5); // 5 minute rest time
     setSeconds(1);
+    setGrind(false);
+    setChill(true);
   };
+
+  const handleTimerRefresh = () => {
+    // reset time to zero when user clicks refresh
+    setGrind(false);
+    setChill(false);
+    setTime(0);
+    setSeconds(0);
+    setMinutes(0);
+    setSecondText('SECOND');
+    setMinuteText('MINUTE');
+  };
+
 
   const handleUsername = () => {
     const form = document.querySelector('form');
@@ -170,7 +266,7 @@ function TimerCard(props) {
       variant="contained"
       className={classes.button}
       onClick={handleTimerRefresh}>
-      REFRESH
+      RESET
         <Refresh className={classes.icons}/>
       </Button>
       </Tooltip>
@@ -185,10 +281,12 @@ function TimerCard(props) {
       </Tooltip>
       </div>
       <div>
+        <Typography className={classes.minutes}>{minuteText}</Typography>
         <Typography
         className={classes.timeFont}>
       {minutes}.{seconds}
       </Typography>
+      <Typography className={classes.seconds}>{secondText}</Typography>
       </div>
     </div>
   );

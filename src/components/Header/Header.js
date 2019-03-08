@@ -7,23 +7,24 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
 import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Timer from '@material-ui/icons/Timer';
+import HelpOutline from '@material-ui/icons/HelpOutline';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
+// import { library } from '@fortawesome/fontawesome-svg-core';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHeart,
-  faTruckMoving,
-  faHome,
-  faUpload,
-} from '@fortawesome/free-solid-svg-icons';
+// import {
+//   faHeart,
+//   faTruckMoving,
+//   faHome,
+//   faUpload,
+// } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHeart,
-  faTruckMoving,
-  faHome,
-  faUpload);
+// library.add(faHeart,
+//   faTruckMoving,
+//   faHome,
+//   faUpload);
 
 const styles = {
   root: {
@@ -35,10 +36,10 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
-    color: 'black',
+    color: '#000',
   },
   link: {
-    color: '#FFF',
+    color: '#000',
     '&:focus, &:hover, &:visited, &:link, &:active': {
       textDecoration: 'none',
     },
@@ -56,29 +57,20 @@ function Header(props) {
     <div className={classes.root}>
       <AppBar position="fixed" color="default">
         <Toolbar>
-          <Tooltip title="agbalumo-timer developed by INKYROO INC." TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
+          <Tooltip title="Developed by INKYROO INC." TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
           <IconButton className={classes.menuButton} >
           <Link to="/" className={classes.link} >
-           <Typography>AGBALUMO-TIMER <Timer /></Typography>
+           <Typography>AGBALUMO TIMER <Timer /></Typography>
             </Link>
           </IconButton>
           </Tooltip>
-          {/* <Typography variant="h6" color="inherit" className={classes.grow}>
-          <Link className={classes.link} to="trucks">
-            Trucks <FontAwesomeIcon icon="truck-moving" className={classes.awesome} />
-            </Link>
-          </Typography>
-          <Tooltip title="favorite trucks"
-          TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
-          <Button color="inherit">
-              <Link to="favorites" className={classes.link}>
-              Favorites <FontAwesomeIcon icon="heart"
-              className={classes.awesome}/></Link></Button></Tooltip>
-              <Tooltip title="upload your trucks">
-              <Button color="inherit">
-              <Link to="#" className={classes.link}>
-              Upload Truck <FontAwesomeIcon icon="upload"
-              className={classes.awesome}/></Link></Button></Tooltip> */}
+              <Tooltip title="learn more about the philosophy behind agbalumo timer"
+          TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}
+          >
+          <Button color="inherit"
+          onClick={() => window.open('https://en.wikipedia.org/wiki/Pomodoro_Technique', '_blank')}>
+              LEARN MORE <HelpOutline
+              className={classes.awesome}/></Button></Tooltip>
         </Toolbar>
       </AppBar>
     </div>
