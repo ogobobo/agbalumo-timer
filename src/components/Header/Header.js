@@ -60,7 +60,7 @@ function Header(props) {
           <Tooltip title="Developed by INKYROO INC." TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
           <IconButton className={classes.menuButton} >
           <Link to="/" className={classes.link} >
-           <Typography>AGBALUMO TIMER <Timer /></Typography>
+           <Typography>POMODORO TIMER <Timer /></Typography>
             </Link>
           </IconButton>
           </Tooltip>
