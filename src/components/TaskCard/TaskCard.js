@@ -65,7 +65,7 @@ function TaskCard(props) {
   const handleDeleteTask = (e) => {
     // eslint-disable-next-line prefer-destructuring
     const deleteTask = e.currentTarget.parentNode.innerText;
-    console.log(tasks.indexOf(deleteTask));
+    // console.log(tasks.indexOf(deleteTask));
     // the filter method below deletes any task that's clicked on
     const remainingTasks = tasks.filter(task => task.indexOf(deleteTask) === -1);
     setTasks(remainingTasks);
@@ -76,11 +76,14 @@ function TaskCard(props) {
     // grab inputed tasks
     const taskInput = document.querySelector('#outlined-full-width').value;
     // append new tasks to the task array, removing leading and trailing spaces
-    // if (tasks.indexOf(taskInput) === -1) {
-    setTasks([...tasks, taskInput.replace(/^\s+|\s+$/g, '').toUpperCase()]);
-    document.querySelector('#outlined-full-width').value = '';
-    // }
-    console.log(tasks);
+    if (tasks.indexOf(taskInput.replace(/^\s+|\s+$/g, '').toUpperCase()) === -1) {
+      setTasks([...tasks, taskInput.replace(/^\s+|\s+$/g, '').toUpperCase()]);
+      document.querySelector('#outlined-full-width').value = '';
+    } else {
+      // prevent already existing tasks from being added to to-do list
+      document.querySelector('#outlined-full-width').value = 'Task Already Exists!';
+    }
+    // console.log(tasks);
   };
 
   return (
