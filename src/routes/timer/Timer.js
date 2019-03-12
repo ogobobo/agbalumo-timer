@@ -17,6 +17,7 @@ import Grid from '@material-ui/core/Grid';
 // import Refresh from '@material-ui/icons/Refresh';
 
 import TimerCard from '../../components/TimerCard/TimerCard';
+import TaskCard from '../../components/TaskCard/TaskCard';
 // import trucksData from '../../data.json';
 
 const styles = {
@@ -39,39 +40,8 @@ function Timer(props) {
   style={{ minHeight: '100vh' }}
 > <Grid item xm={8} className={classes.card}>
   <TimerCard />
+  <TaskCard />
   </Grid>  </Grid>
-  {/* <Grid
-  container
-  spacing={0}
-  direction="column"
-  alignItems="center"
-  justify="center"
-  style={{ minHeight: '100vh' }}
-> <Grid item xs={6}>
-  </Grid> <Grid className={classes.grid}>
-  <Card className={classes.card}>
-      <CardContent>
-      <Avatar alt="rest" src="https://cdn-images-1.medium.com/max/2600/1*lp3SpW1hb1gV_sCV1mfsMg.jpeg" className={classes.avatar} /> <Typography className={classes.name} color="textSecondary" gutterBottom>
-      {name}
-        </Typography>
-      </CardContent>
-      </Card>
-      <Card className={classes.card}>
-      <CardContent>
-      <Avatar alt="rest" src="https://cdn-images-1.medium.com/max/2600/1*lp3SpW1hb1gV_sCV1mfsMg.jpeg" className={classes.avatar} /> <Typography className={classes.name} color="textSecondary" gutterBottom>
-      {name}
-        </Typography>
-      </CardContent>
-      </Card>
-      <Card className={classes.card}>
-      <CardContent>
-      <Avatar alt="rest" src="https://cdn-images-1.medium.com/max/2600/1*lp3SpW1hb1gV_sCV1mfsMg.jpeg" className={classes.avatar} /> <Typography className={classes.name} color="textSecondary" gutterBottom>
-      {name}
-        </Typography>
-      </CardContent>
-      </Card>
-     </Grid>
-     </Grid> */}
   </div>
   );
 }

@@ -13,7 +13,7 @@ import PersonAdd from '@material-ui/icons/PersonAdd';
 // import PauseCircleFilled from '@material-ui/icons/PauseCircleFilled';
 import Refresh from '@material-ui/icons/Refresh';
 import TextField from '@material-ui/core/TextField';
-import { saveState, loadState } from '../../tools/localStorage';
+import { saveStateName, loadStateName } from '../../tools/localStorage';
 // import Card from '@material-ui/core/Card';
 
 
@@ -70,7 +70,7 @@ function TimerCard(props) {
   };
 
   useEffect(() => {
-    const usernameFromMemory = loadState();
+    const usernameFromMemory = loadStateName();
     // Load trucks from Session Storage if available
     if (usernameFromMemory) {
       setUsername(usernameFromMemory);
@@ -81,15 +81,15 @@ function TimerCard(props) {
 
   useEffect(() => {
     if (username.length > 1) {
-      saveState(username);
+      saveStateName(username);
     }
   }, [username]);
 
   useEffect(() => {
     const date = new Date();
-    if (date.getHours() > 0 && date.getHours() < 12) {
+    if (date.getHours() >= 0 && date.getHours() < 12) {
       setGreeting('Good Morning,');
-    } else if (date.getHours() > 12 && date.getHours() < 16) {
+    } else if (date.getHours() >= 12 && date.getHours() < 16) {
       setGreeting('Good Afternoon,');
     } else {
       setGreeting('Good Evening,');
@@ -212,13 +212,19 @@ function TimerCard(props) {
   };
 
 
-  const handleUsername = () => {
+  const handleUsername = (event) => {
+    // this prevents page reload by preventing default form submission
+    event.preventDefault();
+    // this gets the name/value users enter on the form
     const form = document.querySelector('form');
-    setUsername(form.elements[0].value);
+    setUsername(form.elements[0].value.trim());
+    // this makes form disappear on submit
+    setUsernameChange(false);
   };
 
   const handleUsernameChange = () => {
-    console.log('name change clicked');
+    // console.log('name change clicked');
+    // this displays user name form when users click on edit name
     setUsernameChange(true);
   };
 

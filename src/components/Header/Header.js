@@ -12,20 +12,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Timer from '@material-ui/icons/Timer';
 import HelpOutline from '@material-ui/icons/HelpOutline';
 
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-//   faHeart,
-//   faTruckMoving,
-//   faHome,
-//   faUpload,
-// } from '@fortawesome/free-solid-svg-icons';
-
-// library.add(faHeart,
-//   faTruckMoving,
-//   faHome,
-//   faUpload);
-
 const styles = {
   root: {
     flexGrow: 1,
@@ -60,7 +46,7 @@ function Header(props) {
           <Tooltip title="Developed by INKYROO INC." TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
           <IconButton className={classes.menuButton} >
           <Link to="/" className={classes.link} >
-           <Typography>POMODORO TIMER <Timer /></Typography>
+           <Typography>AGBALUMO TIMER <Timer /></Typography>
             </Link>
           </IconButton>
           </Tooltip>
