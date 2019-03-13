@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import FreeBreakfast from '@material-ui/icons/FreeBreakfast';
 import WorkOutline from '@material-ui/icons/WorkOutline';
 import PersonAdd from '@material-ui/icons/PersonAdd';
+import { InputAdornment } from '@material-ui/core';
+import PersonPin from '@material-ui/icons/PersonPin';
 // import PlayCircleFilled from '@material-ui/icons/PlayCircleFilled';
 // import PauseCircleFilled from '@material-ui/icons/PauseCircleFilled';
 import Refresh from '@material-ui/icons/Refresh';
@@ -248,6 +250,13 @@ function TimerCard(props) {
         id="standard-name"
         label="What's your name?"
         margin="normal"
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <PersonPin />
+            </InputAdornment>
+          ),
+        }}
       />
       </form> }
       {usernameChange === true && <form autoComplete="off" onSubmit={handleUsername}>
@@ -255,6 +264,13 @@ function TimerCard(props) {
         id="standard-name"
         label="What's your name?"
         margin="normal"
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <PersonPin />
+            </InputAdornment>
+          ),
+        }}
       />
       </form> }
       <div>
