@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 // import WorkOutline from '@material-ui/icons/WorkOutline';
-// import Tooltip from '@material-ui/core/Tooltip';
-// import Fade from '@material-ui/core/Fade';
+import Tooltip from '@material-ui/core/Tooltip';
+import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import Delete from '@material-ui/icons/Delete';
+import WorkOutline from '@material-ui/icons/WorkOutline';
 import TextField from '@material-ui/core/TextField';
+import { InputAdornment } from '@material-ui/core';
 import { saveStateTask, loadStateTask } from '../../tools/localStorage';
 
 
@@ -99,14 +101,22 @@ function TaskCard(props) {
         InputLabelProps={{
           shrink: true,
         }}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <WorkOutline />
+            </InputAdornment>
+          ),
+        }}
       />
       </form>
         <ol className={classes.list}>
         <Typography>
             {/* this mapping grabs tasks from the tasks array and creates a list */}
-    { tasks.map((task, index) => <li key={index} className={classes.list}>{task}<Button
+    { tasks.map((task, index) => <li key={index} className={classes.list}>{task}
+    <Tooltip title={`click to delete ${task}`} placement="right" TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}><Button
     className={classes.button}
-    onClick={handleDeleteTask}><Delete/></Button></li>)}
+    onClick={handleDeleteTask}><Delete/></Button></Tooltip></li>)}
     </Typography>
     </ol>
     </div>

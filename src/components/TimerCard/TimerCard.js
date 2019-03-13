@@ -230,7 +230,7 @@ function TimerCard(props) {
 
   return (
     <div className={classes.card}>
-    <Tooltip title="change or edit username" TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
+    <Tooltip title="change or edit name" placement="right" TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
       <Button
       variant="contained"
       className={classes.button}
@@ -258,7 +258,7 @@ function TimerCard(props) {
       />
       </form> }
       <div>
-      <Tooltip title="click to grind for 30 minutes" TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
+      <Tooltip title="click to grind for 30 minutes" placement="left" TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
       <Button
       variant="contained"
       className={classes.button}
@@ -276,7 +276,7 @@ function TimerCard(props) {
         <Refresh className={classes.icons}/>
       </Button>
       </Tooltip>
-      <Tooltip title="click to chill for 5 minutes" TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
+      <Tooltip title="click to chill for 5 minutes" placement="right" TransitionComponent={Fade} TransitionProps={{ timeout: 2000 }}>
       <Button
       variant="contained"
       className={classes.button}
