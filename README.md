@@ -1,31 +1,18 @@
 # Agbalumo Timer
 
-[![CircleCI](https://circleci.com/gh/https://github.com/ogobobo/Truck-App.svg?style=svg)](https://circleci.com/gh/https://github.com/ogobobo/Truck-App)
-
-An opinionated starter kit to create fast UI applications using ReactJS.
+This app mimics the pomodoro technique. Also embedded in it is a to-do list application.
 
 ## Requirements
-
-- Node 8+
-- Docker (for deployment)
-
-## Features
-
-The following library and tools selections where made to improve and standarize development.
+[Node]
 
 ### Usage
+clone this repo and cd into the project. Then run the following command in the terminal to launch application locally
 
 `npm install`
 
 `npm start`
 
 `http://localhost:8080`
-
-### Testing
-
-- [Mocha](https://mochajs.org/)
-- [Chai](https://www.chaijs.com/)
-- [Jest](https://jestjs.io/)
 
 ### Building
 
